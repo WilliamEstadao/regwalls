@@ -1,0 +1,409 @@
+<main class="background">
+    <div class="modal">
+        <div class="register" id="registerId">
+            <div class="div100wp" id="go-back">
+                <p style="color: white;text-decoration: underline;cursor: pointer; width: 12px;" onclick="goBack()">Voltar</p>
+            </div>
+            <p style="text-align: center;font-size: 22px;color: white;margin: 22px 0 12px 0; line-height: 1.2;">Cadastra-se <span style="font-style: italic; font-weight: bold;">GRÁTIS</span> e libere <br/> 
+                <span style="font-style: italic; font-weight: bold;">mais 3 matérias exclusivas</span>
+            </p>
+            <div class="grid-input">
+            <input class="input-register" disabled id="register-email-input" /> 
+            <input class="input-register" type="text" id="name-input" placeholder="Nome e Sobrenome*"/> 
+            <input class="input-register" type="tel" id="tel-input" placeholder="Telefone*"/> 
+                <div>
+                    <svg class="seeIcon" id="icon-see-password" aria-labelledby="eyeCrossedIconTitle" color="#2329D6" fill="none" stroke="#2329D6" stroke-linecap="square" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 12s-3 6-10 6-10-6-10-6 3-6 10-6 10 6 10 6Z"></path><circle cx="12" cy="12" r="3"></circle><path d="M3 21 20 4"></path></svg>                
+                    <img class="seeIcon" id="icon-hidden-password" style="display:none;" src="data:image/png;base64,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"/>
+                    <input class="input-register" type="password" id="password-input" placeholder="Senha*"/>
+                </div>
+            </div>
+            <p style="margin-top: 6px;" id="error-text" style="display: none;"></p>
+            <div class="div100wp" style="display: flex;margin-top:6px;margin-bottom: 12px;">
+                <input class="checkbox" type="checkbox" id="keep-conected" value="false"></input> 
+                <p style="color: white;margin-left: 4px;">Manter Conectado</p>
+            </div>
+
+            <div class="div100wp">
+                <button class="register-button" id="register-button">finalizar cadastro</button>
+            </div> 
+            <p style="margin:7px 0px 47px 0;color:white; text-align: center;">Ao continuar, você concorda com os
+               <span style="color: white; text-decoration: underline;">Termos de Uso</span>
+            </p>
+        </div>
+
+        <div class="signup-email" id="signupId">
+            <form>
+                 <p style="text-align: center;font-size: 22px;color: white;margin: 42px 0 12px 0; line-height: 1.2;">Cadastra-se <span style="font-style: italic; font-weight: bold;">GRÁTIS</span> e libere <br/> 
+                <span style="font-style: italic; font-weight: bold;">mais 3 matérias exclusivas</span>
+            </p>
+            <div>
+            <input class="input-email" type="email" id="signup-email-input" placeholder="E-mail*"/> 
+            <p id="error-text-signup" style="color:white;text-align: left;padding-left: 30px;display:none;"></p>
+                <div style="width: 100%;">
+                    <button class="singup-button" id="singup-button" type="submit">Continuar</button>
+                </div> 
+            </div>
+
+            <p style="margin:7px 0px 47px 0;color:white; text-align: center;">Já sou cadastrado.
+                <a href="https://acesso.estadao.com.br/login/?r=https://www.estadao.com.br/"><span style="color: white; text-decoration: underline;">Entrar</span></a>
+            </p>
+            </form>
+        </div>
+        <div class="send-login-modal" id="send-login-modal" style="display: none; flex-direction: column; justify-content: center; align-items: center;margin: 12px;">
+            <img src="https://cdn-icons-png.flaticon.com/128/190/190411.png">
+            <p style="font-size: 40px; color: white; text-align: center" >Você foi cadastrado! aguarde alguns instantes e o login ocorrerá automaticamente</p>
+        </div>
+    </div>
+    </main>
+
+    <script>
+
+        // --------------------------- COMPONENT FOR ALL --------------------------
+        const sendLoginModal = document.getElementById('send-login-modal')
+        const signupEmail = document.getElementById('signup-email-input')
+        const registerEmail = document.getElementById('register-email-input')
+        const inputName = document.getElementById('name-input')
+        const inputTel = document.getElementById('tel-input')
+        const keepConected = document.getElementById('keep-conected')
+        const inputPassword = document.getElementById('password-input')
+        const errorText = document.getElementById('error-text')
+        const signupPage = document.getElementById('signupId')
+        const registerPage = document.getElementById('registerId')
+        const errorTextSignup = document.getElementById('error-text-signup')
+        inputTel.addEventListener("keyup", maskTelefone);
+
+        function maskTelefone(e) {
+            var v = e.target.value.replace(/\D/g,"")
+            v=v.replace(/(\d{2})(\d)/, '($1) $2')
+            v=v.replace(/(\d{4})(\d)/, '$1-$2')
+            v=v.replace(/(\d{4})-(\d)(\d{4})/, '$1$2-$3')
+            v=v.replace(/(-\d{4})\d+?$/, '$1')
+            e.target.value = v;
+        }
+
+
+        const valida = {
+            telefone(value) {
+                var re = /\([1-9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0-9]{4}$/g;
+                return re.test(value);
+            },
+            email(value) {
+                var re =  /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                return re.test(value);
+            },
+            checkbox(checkbox) {
+                if (checkbox.checked) {
+                    return true
+                }
+                return false
+            },
+            name(value) {
+                var re =  /\b[A-Za-zÀ-ú][A-Za-zÀ-ú]+,?\s[A-Za-zÀ-ú][A-Za-zÀ-ú]{2,19}\b/gi;
+                return re.test(value);
+            },
+            password(value) {
+                var re =  /^(?=.*[A-Z])(?=.*[!#@$%&])(?=.*[0-9])(?=.*[a-z]).{6,15}$/;
+                return re.test(value);
+            },
+        }
+
+        const errors = (text,element) => {
+                element.style.display=""
+                element.innerHTML = text
+                element.style.color="#EB3625"
+                element.style.fontWeight="600"
+        }
+
+        const consumeApi = async (body, endPoint, method="POST", mode="") => {
+            var dataForm = new FormData();
+            var response = "";
+            dataForm.append("json", JSON.stringify(body));
+            let headers = {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            }
+
+            if (mode == "no-cors") {
+                headers["mode"] = "no-cors"
+            }
+            try {
+                var responseApi = await fetch(endPoint, {
+                    method: method,
+                    headers: headers,
+                    body: JSON.stringify(body)
+                });
+
+                response = responseApi.json()
+            } catch (_e) {
+                response = _e
+            }
+            return response;
+        }
+        
+       async function goRegister() {
+        let nomes = inputName.value.split(" ");
+            let sobrenome = "";
+
+            for(var i in nomes){
+                sobrenome = nomes[i] + ""
+            }
+            console.log(sobrenome)
+            let body = {
+                "email_login": signupEmail.value,
+                "nome": nomes[0],
+                "telefone": inputTel.value,
+                "password": inputPassword.value,
+                "sobrenome":sobrenome,
+                "aceite_newsletter":"N",
+                "origem":"signwall-zephr"
+            }
+                var registerByApi = await consumeApi(body,"https://api.estadao.com.br/users/register");
+                return registerByApi;
+            }
+                
+       async function login() {
+
+            let body = {
+                "email": signupEmail.value,
+                "password": inputPassword.value,
+                "conectado": valida.checkbox(keepConected)
+            }
+                var registerByApi = await consumeApi(body,"https://api.estadao.com.br/users/login?with_cookie=true");
+                return registerByApi;
+            }
+        
+
+        // --------------------------- SCRIPT FOR PRIMARY FORM --------------------------
+
+        const buttonSignup = document.getElementById('singup-button')
+        buttonSignup.addEventListener('click', async (e) => {
+            e.preventDefault()
+            if(valida.email(signupEmail.value) === false) {
+                errors('Digite um email válido', errorTextSignup)
+            }else{
+                let response = await goRegister()
+                if(response.error.email_existe){
+                    errors('email já cadastrado', errorTextSignup)
+                } 
+                if(response.error.code === 400){
+                    signupPage.style.display="none"
+                    registerPage.style.display="flex"
+                    registerEmail.value = signupEmail.value
+                }    
+            }       
+        })
+
+     // --------------------------- SCRIPT FOR SECONDY FORM --------------------------
+
+     function setCookies (cookies) {
+            cookies.map((cookie)=>{
+                let = {name, value, expire, domain, path} = cookie;
+            
+                var date = new Date();
+                date.setTime(date.getTime() + expire);
+                expires = date.toUTCString();
+
+                document.cookie = name+"="+(value || "") + "; "+"expires=" + expires + "; "+ "domain=" + domain + "; path=/";
+            });
+        }
+
+        const goBack = () => {
+            signupPage.style.display="flex"
+            registerPage.style.display="none"
+        }
+        const iconSee = document.getElementById("icon-see-password")
+        const iconHidden = document.getElementById("icon-hidden-password")
+        const buttonRegister = document.getElementById('register-button')
+
+        iconHidden.addEventListener('click', async (e) => {
+            inputPassword.type="password"
+            iconHidden.style.display="none"
+            iconSee.style.display=""
+        })
+        iconSee.addEventListener('click', async (e) => {
+            inputPassword.type="text"
+            iconHidden.style.display=""
+            iconSee.style.display="none"
+        })
+        buttonRegister.addEventListener('click', async (e) => {
+            if(valida.name(inputName.value) === false) {
+                errors('Digite nome e sobrenome válidos', errorText)
+            }
+            else if(valida.telefone(inputTel.value)=== false){
+                errors('Digite um telefone válido',errorText)
+            }
+            else if(valida.password(inputPassword.value)=== false){
+                errors('A senha deve conter letra maiuscula, minuscula e caracter especial',errorText) 
+            }else{
+              const res =  await goRegister()
+            if(res.erro){
+                alert(res.error.message)
+            }
+            if (res.token) {
+                signupPage.style.display="none"
+                registerPage.style.display="none"
+                sendLoginModal.style.display="flex"
+                
+                var send_data_form_login = await login()
+                var cookies = send_data_form_login.cookies;
+
+                setCookies(cookies)
+                            
+                if (window.dataLayerEstadao) {
+                    window.dataLayerEstadao.push({
+                        event: "genericEvent",
+                        genericCategory: "Regwall",
+                        genericAction: "show",
+                        genericLabel: "regwall_sucesso_login",
+                    });
+                }
+
+                setTimeout(() => {
+                document.location.reload(true);
+                }, 4000);
+                }
+            }                   
+        })
+
+    </script>
+    
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap'); 
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  body{
+    overflow: hidden !important;
+  }
+  .background {
+    z-index: 19;
+    background-color: rgba(0, 0, 0, 0.473);
+    width: 100%;
+    height: 100%;
+    overflow-y: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: fixed;
+  }
+
+.register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+    display: none;
+}
+.div100wp{
+    width: 100%;
+}
+.grid-input{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.input-register{
+    width: 285px;
+  height: 44.4px;
+  padding: 14.4px;
+  object-fit: contain;
+  border-radius: 5px;
+  border: solid 1px #2575e8;
+  background-color: #fff;
+  outline: none;
+}.input-register::-webkit-input-placeholder{
+    color:#2575e8;
+}
+.seeIcon{
+    width: 24px;
+    position: absolute;
+    margin-left: 250px;
+    margin-top: 10px;
+    cursor:pointer;
+}
+#noSeeIcon{
+    cursor: pointer;
+    width: 24px;
+    position: absolute;
+    margin-left: 250px;
+    margin-top: 10px;
+}
+.register-button{
+  width: 100%;
+  height: 36px;
+  padding: 9.5px;
+  border-radius: 5px;
+  background-color: #f19b2c;
+  color:white;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media(max-width:580px){
+   .grid-input{
+    grid-template-columns: 1fr;
+   }
+   .div100wp{
+    width: 285px;
+   }
+   #go-back{
+    width: 90vw;
+   }
+}
+.modal{
+    margin: auto;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+    border-radius: 10px;
+    box-shadow: 6px 6px 10px 0 rgba(0, 0, 0, 0.16);
+    font-family: 'Lato';
+    background-color: #2575e8;
+}
+.signup-email{
+    color: red;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.input-email{
+    width: 285px;
+  height: 44.4px;
+  margin: 22.4px 19px 6.6px 25px;
+  padding: 14.4px;
+  object-fit: contain;
+  border-radius: 5px;
+  border: solid 1px #2575e8;
+  background-color: #fff;
+  outline: none;
+}.input-email::-webkit-input-placeholder{
+    color:#2575e8;
+}
+
+.singup-button{
+  width: 285px;
+  height: 36px;
+  margin: 6.6px 19px 17.9px 25px;
+  padding: 9.5px 98.5px;
+  border-radius: 5px;
+  background-color: #f19b2c;
+  color:white;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+</style>
